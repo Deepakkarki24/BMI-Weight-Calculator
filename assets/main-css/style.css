@@ -1,0 +1,344 @@
+/* Css reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.header-section{
+    width: 100%;
+    position: relative;    
+}
+
+
+.header-section .nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+}
+
+.header-section .nav-bar::before{
+    content: '';
+    background-color: #000;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.header-section .nav-bar .left-logo img{
+    width: 40%;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+}
+
+.header-section .nav-bar .nav-items{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.header-section .nav-bar .nav-items .nav-links{
+    list-style: none;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+
+.header-section .nav-bar .nav-items .nav-links a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.header-section .nav-bar .nav-items .nav-links::after{
+    content: '';
+    background-color: rgb(86, 213, 211);
+    width: 0%;
+    height: 2px;
+    margin: auto;
+    display: block;
+    transition: all ease-in 0.5s;
+}
+
+.header-section .nav-bar .nav-items .nav-links:hover::after{
+    width: 100%;
+}
+
+.content{
+    background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30, 0.5)),url('../img/home-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+.content .content-box{
+    padding: 30vh 0;
+}
+
+.content-box .highlight-text h3{
+    font-size: 65px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.content-box .sub-text p{
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+}
+
+.content-box .calc-btn{
+    text-align: center;
+    padding: 40px 0;
+}
+
+.content-box .calc-btn a{
+    text-decoration: none;
+    padding: 20px;
+    background-color: rgb(86, 213, 211);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.content-box .calc-btn a:hover{
+    background-color: #333333;
+    color: rgb(86, 213, 211);
+    border-radius: 20px;
+}
+
+.content .calculator-box{
+    padding: 40px 30px;
+    margin-top: 120px;
+    background-color: #0a58ca94;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: inset 0px 0px 7px 3px #fff;
+}
+
+.content .calculator-box .title h3{
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+}
+
+.form-control{
+    padding: 20px !important;
+    background-color: #ffffff82 !important;
+}
+
+.form-control label{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-control input{
+    padding: 10px 0;
+    width: 100%;
+    text-indent: 20px;
+    outline: none;
+    border: 1px solid #a1a1a1;
+}
+
+.form-control .input-feild{
+    padding: 10px 0;
+}
+
+.calculator-box #result{
+    font-size: 20px;
+    color: #000;
+    text-align: right;
+    font-weight: 600;
+    padding: 15px 0;
+}
+
+.calculator-box #btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 17px;
+    margin: 12px 0;
+}
+
+.para-box .para p{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 35px;
+    text-transform: capitalize;
+    padding-top: 40vh;
+}
+
+.content-box .contact-info p{
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+
+.content-box .contact-info p a{
+    color: rgb(86, 213, 211);
+    text-decoration: none;
+}
+
+.content-box .contact-info p a:hover{
+    text-decoration: underline;
+}
+
+.nav-bar .mobile-menu-bar i{
+    font-size: 26px;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    display: none;
+}
+
+.nav-bar .mobile-close-cross i {
+    font-size: 26px;
+    color: #fff;
+    font-weight: 600;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    top: 13px;
+    right: 24px;
+}
+
+@media (max-width: 768px){
+    .content-box .highlight-text h3{
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    .content-box .sub-text p {
+        font-size: 14px;
+        letter-spacing: normal;
+        padding: 10px 0;
+    }
+
+    .content-box .calc-btn a {
+        font-size: 12px;
+        padding: 16px;
+    }
+
+    .content-box .calc-btn {
+        padding: 18px 0;
+    }
+
+    .content .content-box {
+        padding-top: 40vh;
+        padding-bottom: 0;
+    }
+
+    .header-section .nav-items{
+        flex-direction: column;
+        gap: 16px !important;
+        position: absolute !important;
+        background-color: #000;
+        max-width: 450px;
+        width: 60%;
+        right: 0;
+        top: 0;
+        padding-top: 60px!important;
+        height: 100vh;
+        max-width: 0;
+        overflow: hidden;
+        transition: 0.7s;
+    }
+
+    .header-section .nav-items .nav-links{
+        width: 100%;
+        border-bottom: 1px solid #fff;
+        padding: 10px;
+    }
+
+    .nav-bar .mobile-menu-bar i{
+        display: block;
+        padding: 0 15px;
+    }
+
+    .nav-bar .mobile-close-cross i{
+        transition: 0.5s;
+        display: none;
+    }
+
+    .header-section .nav-bar .left-logo img{
+        width: 50%;
+    }
+
+    .content-box .contact-info p{
+        font-size: 15px;
+    }
+
+    .para-box .para p{
+        font-size: 13px;
+        line-height: 24px;
+        margin: 0; 
+        padding-top: 20vh; 
+    }
+
+    .header-section .nav-bar .nav-items .nav-links:hover::after{
+        width: 0;
+    }
+
+    .content .calculator-box{
+        margin-top: 100px;
+        padding: 30px;
+    }
+
+    .content .calculator-box .title h3{
+        font-size: 16px;
+    }
+
+    .form-control label{
+        font-size: 14px;
+    }
+
+    .calculator-box #btn{
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .form-control input {
+        padding: 6px 0;
+    }
+
+    .form-control {
+        padding: 10px !important;
+    }
+
+    .calculator-box #result{
+        padding: 2px 0;
+    }
+
+
+}
