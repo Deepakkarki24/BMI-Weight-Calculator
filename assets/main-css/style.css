@@ -85,7 +85,7 @@ html, body{
 }
 
 .content{
-    background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30, 0.5)),url('../img/home-bg.jpg');
+    background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30, 0.5)),url('../img/home-bg.webp');
     background-position: center;
     background-size: cover;
     height: 100%;
