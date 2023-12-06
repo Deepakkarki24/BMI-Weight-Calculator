@@ -89,6 +89,7 @@ html, body{
     background-position: center;
     background-size: cover;
     object-fit: cover;
+    height: 100vh;
 }
 
 .content .content-box{
